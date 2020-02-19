@@ -1,6 +1,6 @@
 import React from "react";
 import { Text, StatusBar, SafeAreaView, TouchableOpacity } from "react-native";
-import PermissionModal from "./lib/PermissionModal";
+import { PermissionModal, PermissionItem } from "./lib/";
 
 const App = () => {
   return (
@@ -29,7 +29,11 @@ const App = () => {
         >
           <Text style={{ color: "#31243f" }}>Open Permission Modal</Text>
         </TouchableOpacity>
-        <PermissionModal ref={ref => (this.permModal = ref)} />
+        <PermissionModal ref={ref => (this.permModal = ref)}>
+          <PermissionItem />
+          <PermissionItem />
+          <PermissionItem />
+        </PermissionModal>
       </SafeAreaView>
     </>
   );

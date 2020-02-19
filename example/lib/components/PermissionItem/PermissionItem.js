@@ -5,56 +5,41 @@ import Ripple from "react-native-material-ripple";
 /**
  * ? Local Imports
  */
-import styles from "./PermissionItem.style";
+import styles, {
+  _iconContainer,
+  _iconStatusStyle
+} from "./PermissionItem.style";
 
 const PermissionItem = props => {
-  const { ImageComponent } = props;
+  const {
+    title,
+    source,
+    subtitle,
+    iconComponent,
+    titleTextStyle,
+    ImageComponent,
+    iconStatusColor,
+    subtitleTextStyle,
+    iconContainerBackgroundColor
+  } = props;
   return (
     <Ripple
-      style={{
-        paddingLeft: 16,
-        paddingRight: 16,
-        marginBottom: 8,
-        flexDirection: "row",
-        alignItems: "center",
-        justifyContent: "center"
-      }}
+      style={styles.container}
       rippleColor="gray"
       rippleDuration={750}
       rippleContainerBorderRadius={16}
+      {...props}
     >
-      <View
-        style={{
-          width: 35,
-          height: 35,
-          borderRadius: 18,
-          alignItems: "center",
-          justifyContent: "center",
-          backgroundColor: "#f7f7f7"
-        }}
-      >
-        <ImageComponent
-          style={{ height: 15, width: 15 }}
-          source={require("../../assets/placeholder.png")}
-        />
-        <View
-          style={{
-            top: 0,
-            right: 0,
-            width: 10,
-            height: 10,
-            borderRadius: 10,
-            position: "absolute",
-            backgroundColor: "green"
-          }}
-        />
+      <View style={_iconContainer(iconContainerBackgroundColor)}>
+        {iconComponent || (
+          <ImageComponent source={source} style={styles.iconStyle} />
+        )}
+        <View style={_iconStatusStyle(iconStatusColor)} />
       </View>
-      <View style={{ margin: 12 }}>
-        <Text style={{ fontSize: 14, fontWeight: "600", color: "#6a6a6a" }}>
-          Location
-        </Text>
-        <Text style={{ fontSize: 12, color: "#949494" }}>
-          Give us the this permission to access full features
+      <View style={styles.textContainer}>
+        <Text style={titleTextStyle || styles.titleTextStyle}>{title}</Text>
+        <Text style={subtitleTextStyle || styles.subtitleTextStyle}>
+          {subtitle}
         </Text>
       </View>
     </Ripple>
@@ -62,11 +47,20 @@ const PermissionItem = props => {
 };
 
 PermissionItem.propTypes = {
-  example: PropTypes.number
+  title: PropTypes.string,
+  subtitle: PropTypes.string,
+  example: PropTypes.number,
+  iconStatusColor: PropTypes.string,
+  iconContainerBackgroundColor: PropTypes.string
 };
 
 PermissionItem.defaultProps = {
-  ImageComponent: Image
+  title: "Location",
+  ImageComponent: Image,
+  iconStatusColor: "green",
+  iconContainerBackgroundColor: "#f7f7f7",
+  source: require("../../assets/placeholder.png"),
+  subtitle: "Give us the this permission to access full features"
 };
 
 export default PermissionItem;
