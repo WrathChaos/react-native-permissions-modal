@@ -19,7 +19,7 @@
   ],
   "homepage": "https://www.freakycoder.com",
   "bugs": "https://github.com/WrathChaos/react-native-permissions-modal/issues",
-  "main": "./lib/src/index.js",
+  "main": "./lib/index.js",
   "repository": "git@github.com:WrathChaos/react-native-permissions-modal.git",
   "author": "Kuray (FreakyCoder) <kurayogun@gmail.com>",
   "license": "MIT",
