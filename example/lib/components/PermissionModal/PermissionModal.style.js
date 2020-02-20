@@ -4,6 +4,7 @@ export default StyleSheet.create({
   content: {
     padding: 24,
     marginTop: 8,
+    marginLeft: 6,
     marginBottom: 8
   },
   content__heading: {

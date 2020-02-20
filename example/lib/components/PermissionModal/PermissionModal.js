@@ -5,7 +5,6 @@ import { Modalize } from "react-native-modalize";
  * ? Local Imports
  */
 import styles from "./PermissionModal.style";
-import PermissionItem from "../PermissionItem/PermissionItem";
 
 export default class PermissionModal extends React.PureComponent {
   modal = React.createRef();

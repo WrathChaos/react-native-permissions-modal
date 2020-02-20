@@ -36,11 +36,22 @@ const PermissionItem = props => {
         )}
         <View style={_iconStatusStyle(iconStatusColor)} />
       </View>
-      <View style={styles.textContainer}>
-        <Text style={titleTextStyle || styles.titleTextStyle}>{title}</Text>
-        <Text style={subtitleTextStyle || styles.subtitleTextStyle}>
-          {subtitle}
-        </Text>
+      <View
+        style={{
+          flexDirection: "row",
+          alignItems: "center"
+        }}
+      >
+        <View style={styles.textContainer}>
+          <Text style={titleTextStyle || styles.titleTextStyle}>{title}</Text>
+          <Text style={subtitleTextStyle || styles.subtitleTextStyle}>
+            {subtitle}
+          </Text>
+        </View>
+        <ImageComponent
+          style={{ height: 15, width: 15, marginLeft: 8 }}
+          source={require("../../assets/chevron.png")}
+        />
       </View>
     </Ripple>
   );

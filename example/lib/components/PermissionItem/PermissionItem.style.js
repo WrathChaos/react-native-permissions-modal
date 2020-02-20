@@ -1,3 +1,6 @@
+import { Dimensions } from "react-native";
+const { width } = Dimensions.get("window");
+
 export const _iconContainer = backgroundColor => ({
   width: 35,
   height: 35,
@@ -19,24 +22,24 @@ export const _iconStatusStyle = backgroundColor => ({
 
 export default {
   container: {
-    marginBottom: 8,
-    paddingLeft: 16,
-    paddingRight: 16,
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "center"
+    margin: 3,
+    padding: 12,
+    right: 16,
+    flexDirection: "row"
   },
   iconStyle: {
     width: 15,
     height: 15
   },
   textContainer: {
-    margin: 12
+    bottom: 3,
+    marginLeft: 12,
+    width: width * 0.7
   },
   titleTextStyle: {
     fontSize: 14,
-    fontWeight: "600",
-    color: "#6a6a6a"
+    color: "#6a6a6a",
+    fontWeight: "600"
   },
   subtitleTextStyle: {
     fontSize: 12,
