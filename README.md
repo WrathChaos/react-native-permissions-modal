@@ -2,7 +2,7 @@
 
 [![Battle Tested ✅](https://img.shields.io/badge/-Battle--Tested%20%E2%9C%85-03666e?style=for-the-badge)](https://github.com/WrathChaos/react-native-permissions-modal)
 
-[![React Native Library Boiler Plate](https://img.shields.io/badge/-React%20Native%20Library%20Boilerplate-lightgrey?style=for-the-badge)](https://github.com/WrathChaos/react-native-permissions-modal)
+[![Awesome & Fully Customizable Permissions Modal for React Native](https://img.shields.io/badge/-Awesome%20%26%20Fully%20Customizable%20Permissions%20Modal%20for%20React%20Native-lightgrey?style=for-the-badge)](https://github.com/WrathChaos/react-native-permissions-modal)
 
 [![npm version](https://img.shields.io/npm/v/react-native-permissions-modal.svg?style=for-the-badge)](https://www.npmjs.com/package/react-native-permissions-modal)
 [![npm](https://img.shields.io/npm/dt/react-native-permissions-modal.svg?style=for-the-badge)](https://www.npmjs.com/package/react-native-permissions-modal)
