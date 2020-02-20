@@ -110,6 +110,12 @@ this.permModal.closeModal();
 | titleTextStyle               |   style   |    default    | change title's text style                            |
 | subtitleTextStyle            |   style   |    default    | change subtitle's text style                         |
 
+# FAQ
+
+### Android: Modal does not response the touchables :O
+
+Check out [`react-native-gesture-handler`'s documentation](https://kmagiera.github.io/react-native-gesture-handler/docs/getting-started.html) to set it up.
+
 ## Future Plans
 
 - [x] ~~LICENSE~~
