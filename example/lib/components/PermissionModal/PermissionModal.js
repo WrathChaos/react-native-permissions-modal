@@ -41,8 +41,6 @@ export default class PermissionModal extends React.PureComponent {
     return (
       <Modalize
         ref={this.modal}
-        panGestureEnabled={false}
-        closeOnOverlayTap={false}
         adjustToContentHeight
         handlePosition="inside"
         {...this.props}

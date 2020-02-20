@@ -15,7 +15,11 @@ const App = () => {
         >
           <Text style={{ color: "#31243f" }}>Open Permission Modal</Text>
         </TouchableOpacity>
-        <PermissionModal ref={ref => (this.permModal = ref)}>
+        <PermissionModal
+          panGestureEnabled={false}
+          closeOnOverlayTap={false}
+          ref={ref => (this.permModal = ref)}
+        >
           <PermissionItem />
           <PermissionItem
             title="Camera"
