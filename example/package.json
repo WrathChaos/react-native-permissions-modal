@@ -14,7 +14,8 @@
     "react-native": "0.61.5",
     "react-native-gesture-handler": "^1.6.0",
     "react-native-material-ripple": "^0.9.1",
-    "react-native-modalize": "^1.3.7-rc.6"
+    "react-native-modalize": "^1.3.7-rc.6",
+    "react-native-permissions-modal": "0.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",
