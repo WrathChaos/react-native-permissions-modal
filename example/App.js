@@ -6,9 +6,7 @@ const App = () => {
   return (
     <>
       <StatusBar barStyle="dark-content" />
-      <SafeAreaView
-        style={{ flex: 1, alignItems: "center", justifyContent: "center" }}
-      >
+      <SafeAreaView style={styles.container}>
         <TouchableOpacity
           style={styles.buttonStyle}
           onPress={() => this.permModal.openModal()}
@@ -40,6 +38,11 @@ const App = () => {
 };
 
 const styles = {
+  container: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center"
+  },
   buttonStyle: {
     height: 40,
     width: 250,
