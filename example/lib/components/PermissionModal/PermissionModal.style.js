@@ -7,13 +7,13 @@ export default StyleSheet.create({
     marginLeft: 6,
     marginBottom: 8
   },
-  content__heading: {
+  titleStyle: {
     fontSize: 23,
     marginTop: 8,
     color: "#333",
     fontWeight: "600"
   },
-  content__description: {
+  subtitleStyle: {
     fontSize: 15,
     fontSize: 14,
     color: "#666",

@@ -19,14 +19,15 @@ const App = () => {
           <PermissionItem />
           <PermissionItem
             title="Camera"
-            subtitle="To access camera features"
             iconStatusColor="red"
+            subtitle="To access camera features"
             source={require("./assets/photo.png")}
+            onPress={() => alert("hello")}
           />
           <PermissionItem
             title="Internet"
-            subtitle="To access the services, give us the permission"
             source={require("./assets/wifi.png")}
+            subtitle="To access the services, give us the permission"
           />
         </PermissionModal>
       </SafeAreaView>

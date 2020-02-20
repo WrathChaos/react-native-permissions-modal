@@ -44,5 +44,14 @@ export default {
   subtitleTextStyle: {
     fontSize: 12,
     color: "#949494"
+  },
+  contextContainer: {
+    alignItems: "center",
+    flexDirection: "row"
+  },
+  chevronStyle: {
+    width: 15,
+    height: 15,
+    marginLeft: 8
   }
 };

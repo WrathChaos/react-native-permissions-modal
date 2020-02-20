@@ -10,6 +10,8 @@ import styles, {
   _iconStatusStyle
 } from "./PermissionItem.style";
 
+const chevronIcon = require("../../assets/chevron.png");
+
 const PermissionItem = props => {
   const {
     title,
@@ -36,22 +38,14 @@ const PermissionItem = props => {
         )}
         <View style={_iconStatusStyle(iconStatusColor)} />
       </View>
-      <View
-        style={{
-          flexDirection: "row",
-          alignItems: "center"
-        }}
-      >
+      <View style={styles.contextContainer}>
         <View style={styles.textContainer}>
           <Text style={titleTextStyle || styles.titleTextStyle}>{title}</Text>
           <Text style={subtitleTextStyle || styles.subtitleTextStyle}>
             {subtitle}
           </Text>
         </View>
-        <ImageComponent
-          style={{ height: 15, width: 15, marginLeft: 8 }}
-          source={require("../../assets/chevron.png")}
-        />
+        <ImageComponent source={chevronIcon} style={styles.chevronStyle} />
       </View>
     </Ripple>
   );

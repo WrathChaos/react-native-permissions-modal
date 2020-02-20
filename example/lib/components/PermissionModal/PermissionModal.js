@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Text, View } from "react-native";
 import { Modalize } from "react-native-modalize";
 /**
@@ -22,13 +23,13 @@ export default class PermissionModal extends React.PureComponent {
   };
 
   renderContent = () => {
+    const { title = "Permissions", subtitle } = this.props;
     return (
       <View style={styles.content}>
         <View>
-          <Text style={styles.content__heading}>Permissions</Text>
-          <Text numberOfLines={3} style={styles.content__description}>
-            Phasellus id scelerisque sem. Vivamus consequat leo turpis, vitae
-            sagittis lacus efficitur eu.
+          <Text style={styles.titleStyle}>{title}</Text>
+          <Text numberOfLines={3} style={styles.subtitleStyle}>
+            {subtitle}
           </Text>
         </View>
         <View>{this.props.children}</View>
@@ -38,9 +39,27 @@ export default class PermissionModal extends React.PureComponent {
 
   render() {
     return (
-      <Modalize ref={this.modal} adjustToContentHeight handlePosition="inside">
+      <Modalize
+        ref={this.modal}
+        panGestureEnabled={false}
+        closeOnOverlayTap={false}
+        adjustToContentHeight
+        handlePosition="inside"
+        {...this.props}
+      >
         {this.renderContent()}
       </Modalize>
     );
   }
 }
+
+PermissionModal.propTypes = {
+  title: PropTypes.string,
+  subtitle: PropTypes.string
+};
+
+PermissionModal.defaultProps = {
+  title: "Permissions",
+  subtitle:
+    "Phasellus id scelerisque sem. Vivamus consequat leo turpis, vitae sagittis lacus efficitur eu.Phasellus id scelerisque sem. Vivamus consequat leo turpis, vitae sagittis lacus efficitur eu."
+};
