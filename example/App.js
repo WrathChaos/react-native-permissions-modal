@@ -1,6 +1,9 @@
 import React from "react";
 import { Text, StatusBar, SafeAreaView, TouchableOpacity } from "react-native";
-import { PermissionModal, PermissionItem } from "./lib";
+import {
+  PermissionModal,
+  PermissionItem
+} from "react-native-permissions-modal";
 
 const App = () => {
   return (

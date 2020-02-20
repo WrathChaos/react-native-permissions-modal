@@ -121,6 +121,10 @@ Check out [`react-native-gesture-handler`'s documentation](https://kmagiera.gith
 - [x] ~~LICENSE~~
 - [ ] Write an article about the lib on Medium
 
+## Credits
+
+Thank you for this awesome inspiration [João Angelo](https://dribbble.com/shots/9252130-iFood-Pending-Permissions/attachments/1296281?mode=media)
+
 ## Author
 
 FreakyCoder, kurayogun@gmail.com
